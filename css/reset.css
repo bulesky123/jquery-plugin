@@ -1,0 +1,157 @@
+/** dialog style **/
+/* box 布局 */
+*{
+    margin:0;
+}
+.flex-h {
+    display: box;			  /* OLD - Android 4.4- */
+    display: -webkit-box;	  /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;		 /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;	  /* TWEENER - IE 10 */
+    display: -webkit-flex;	 /* NEW - Chrome */
+    display: flex;			 /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    /* 09版 */
+    -webkit-box-orient: horizontal;
+    /* 12版 */
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    -o-flex-direction: row;
+    flex-direction: row;
+}
+.flex-box{
+    display: box;			  /* OLD - Android 4.4- */
+    display: -webkit-box;	  /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;		 /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;	  /* TWEENER - IE 10 */
+    display: -webkit-flex;	 /* NEW - Chrome */
+    display: flex;			 /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    /* 09版 默认横向排列 */
+    -webkit-box-orient: horizontal;
+}
+.flex-flow-col{
+    -webkit-box-orient:vertical;
+    box-orient:vertical;
+    -webkit-flex-flow:column;
+    flex-flow:column;
+}
+.flex-center {
+    -webkit-box-pack: center;
+    box-pack: center;
+    /* 左右全部居中 */
+    -webkit-justify-content: center;
+    justify-content : center;
+}
+.flex-justify {
+    -webkit-box-pack: justify;
+    box-pack: justify;
+    /* 平分开来 */
+    -webkit-justify-content: space-around;
+    justify-content : space-around;
+}
+.flex-align{
+    -webkit-box-align:center;
+    box-align:center;
+    /* 上下居中 */
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.flex-stretch{
+    -webkit-align-items: stretch;
+    align-items: stretch;
+    /* 撑满盒子高度 */
+    -webkit-box-align:stretch;
+    box-align:stretch;
+}
+.flex{
+    box-flex:1;
+    -webkit-box-flex:1;
+    -webkit-flex:1;
+    -ms-flex:1;
+    flex:1;
+}
+.none{
+    display: none;
+}
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+.f_r{
+    float: right;
+}
+.f_l{
+    float: left;
+}
+.t_l{
+    text-align: left;
+}
+.t_r{
+    text-align: right;
+}
+.t_c{
+    text-align: center;
+}
+.dialog .content{
+    border-radius: 5px;
+    overflow: hidden;
+    font-size: 0.7em;
+    background:#fff;
+    padding:25px;
+}
+html,body,.shade,.dialog{
+    height:100%;
+}
+.dialog  .bar{
+    width: 2rem;
+    height: 2rem;
+    float: right;
+    background-position: center;
+    background-image: url("../yh_gb.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.dialog .toast{
+    padding: 8px;
+    border-radius: 5px;
+    background: rgba(0,0,0,0.8);
+    color: #ffffff;
+}
+.dialog .content .confirm{
+    width: 12rem;
+    font-size: 1.14em;
+}
+.dialog .content .confirm .tit{
+    height: 2.5rem;
+    line-height: 2.5rem;
+    border-bottom: 1px solid #e2e2e2;
+    text-align: left;
+    padding-left: 10px;
+}
+.dialog .content .confirm .cont{
+    padding:0.5rem;
+    text-align: left;
+
+}
+.dialog .content .confirm .btnbox{
+    height: 2.75rem;
+    line-height: 2.75rem;
+    border-top: 1px solid #e2e2e2;
+}
+.dialog .content .confirm .btnbox .flex{
+    position: relative;
+}
+.dialog .content .confirm .btnbox .line{
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -0.7rem;
+    height: 1.4rem;
+    border-left: 1px solid #e2e2e2;
+}
