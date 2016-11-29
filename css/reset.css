@@ -3,6 +3,9 @@
 *{
     margin:0;
 }
+html,body,.shade,.dialog{
+    height:100%;
+}
 .flex-h {
     display: box;			  /* OLD - Android 4.4- */
     display: -webkit-box;	  /* OLD - iOS 6-, Safari 3.1-6 */
@@ -96,16 +99,51 @@
 }
 .t_c{
     text-align: center;
+    width:80%;
 }
 .dialog .content{
+    font-size: 0.7em;
+    padding:0 25px 25px 25px;
+}
+.contentBox{
+    background:#fff;
     border-radius: 5px;
     overflow: hidden;
     font-size: 0.7em;
-    background:#fff;
-    padding:25px;
+    font-family:"Microsoft Yahei";
 }
-html,body,.shade,.dialog{
-    height:100%;
+.dialogTitle{
+    font-weight: bold;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 20px;
+}
+.buttonBox{
+    border-top: 1px solid #e4e4e4;
+    font-size: 15px;
+    min-height:35px;
+    line-height:35px;
+    padding:4px 0;
+}
+.buttonBox p:last-child{
+    color:#4c6ed2;
+}
+.buttonBox p.button{
+    width:49%;
+    display:inline-block;
+}
+span.button{
+    width: calc( (100% - 38px) * 0.33);
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin:8px 0 8px 8px;
+    float: left;
+}
+span.button:nth-child(3n+1){
+    margin-left:10px;
+}
+.border-left{
+    border-left:1px solid #e4e4e4;
 }
 .dialog  .bar{
     width: 2rem;
