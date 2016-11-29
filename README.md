@@ -33,6 +33,24 @@ var d1=dialog.dialog({
     _function.DX(12.33)  =>壹拾贰元叁角叁分
     _function.DateFormat(1289407948,'yyyy-MM-dd hh:mm:ss') =>  2010-11-11 00:52:28
     _function.priceFormat(10)   => 10.00
+##form.js 的使用
+###实例化一个jq对象
+    var form=$('#form').form();
+###获取表单的值
+    var formData=form.getData()
+###设置表单的值
+    form.setData()
+###提交表单
+    form.submit()
+###重置表单的值
+    form.reset()
+###清除表单的值
+    form.clear()
+##validate.js 的使用
+###实例化
+    var form=$('form1').validate()
+###在表单里设置validate 自定义属性
+    form.getError()
 #说明
 此demo主要是工作过程中用的，公用的
 #感谢
