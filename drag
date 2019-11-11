@@ -1835,4 +1835,239 @@
   } else {
     window.drawTop = drawTop
   }
+//   drawTop.error=function(info){
+//     layer.msg(info,{
+//       time:2000,
+//     });
+//   };
+//   drawTop.theme.fillStyle='#fff';
+//   // 配置舞台
+//   var Stage=new drawTop.Stage({
+//   id:'drawCanvas',
+//   view:{
+//     resize:true,
+//   },
+//   Menu:{
+//     btn:{
+//       line:[{
+//         name:'删除直线',
+//         click:function(e){
+//           var fromId = e.triggerDrawNode.from.id;
+//           var toId = e.triggerDrawNode.to.id;
+//           alert('删除直线formId='+fromId, '删除直线toId='+toId)
+//         }
+//       }],
+//       rect:[{
+//         name:'删除节点',
+//         click:function(e){
+//           var jobId = e.triggerDrawNode.id;
+//           alert('删除节点jobId='+jobId)
+//         }
+//       },{
+//         name:'查看详情',
+//         click:function(e){
+//           var jobid = e.triggerDrawNode.id;
+//           alert('查看详情jobid='+jobid)
+//         }
+//       }],
+//     }
+//   }
+// });
+// getTopology(Stage);
+// function getTopology(stage){
+//   var json = []
+//   var nodeJson= {
+//     "nodes":[
+//         {
+//             "anchorPosition":{
+//                 "classPath":"Q.Position.CENTER_MIDDLE"
+//             },
+//             "id":"drag_1573026009782",
+//             "location":{
+//                 "x":502.9,
+//                 "y":82.89999999999999
+//             },
+//             "name":"我是普通节点，可以做一下逻辑处理，秀港澳三个分号公司的工会嘎哈搜帝国时代工会哦啊刚好是读后感",
+//             "properties":{
+//                 "task_id":"drag_1573026009782"
+//             },
+//             "dataValue":{
+//             },
+//             "type":"Q.Node",
+//             "styles":{
+
+//             }
+//         },
+//         {
+//             "anchorPosition":{
+//                 "classPath":"Q.Position.CENTER_MIDDLE"
+//             },
+//             "id":"drag_1573026011115",
+//             "location":{
+//                 "x":225.2,
+//                 "y":438.09999999999997
+//             },
+//             "name":"【跳转节点】，我是跳转节点，直接跳转下一步",
+//             "properties":{
+//                 "task_id":"drag_1573026011115"
+//             },
+//             "dataValue":{
+//             },
+//             "type":"Q.Node",
+//             "styles":{
+
+//             }
+//         },
+//         {
+//             "anchorPosition":{
+//                 "classPath":"Q.Position.CENTER_MIDDLE"
+//             },
+//             "id":"drag_1573026012506",
+//             "location":{
+//                 "x":844.3,
+//                 "y":423.2
+//             },
+//             "name":"【结束节点】，我是结束节点，到我这里直接就结束了",
+//             "properties":{
+//                 "task_id":"drag_1573026012506"
+//             },
+//             "dataValue":{
+//             },
+//             "type":"Q.Node",
+//             "styles":{
+
+//             }
+//         },
+//         {
+//             "anchorPosition":{
+//                 "classPath":"Q.Position.CENTER_MIDDLE"
+//             },
+//             "id":"drag_591573095089082",
+//             "location":{
+//                 "x":543.2863499999999,
+//                 "y":433.84380999999996
+//             },
+//             "name":"我是跳转节点，直接跳转下一步",
+//             "properties":{
+//                 "task_id":"drag_591573095089082"
+//             },
+//             "dataValue":{
+//             },
+//             "type":"Q.Node",
+//             "styles":{
+
+//             }
+//         },
+//         {
+//             "anchorPosition":{
+//                 "classPath":"Q.Position.CENTER_MIDDLE"
+//             },
+//             "id":"drag_11573458034542",
+//             "location":{
+//                 "x":57,
+//                 "y":51
+//             },
+//             "name":"【跳转节点】，我是跳转节点，直接跳转下一步",
+//             "properties":{
+//                 "task_id":"drag_11573458034542"
+//             },
+//             "dataValue":{
+//             },
+//             "type":"Q.Node",
+//             "styles":{
+
+//             }
+//         },
+//         {
+//             "anchorPosition":{
+//                 "classPath":"Q.Position.CENTER_MIDDLE"
+//             },
+//             "id":"drag_11573458267736",
+//             "location":{
+//                 "x":105,
+//                 "y":245
+//             },
+//             "name":"【普通节点】，我是普通节点，可以做一下逻辑处理",
+//             "properties":{
+//                 "task_id":"drag_11573458267736"
+//             },
+//             "dataValue":{
+//             },
+//             "type":"Q.Node",
+//             "styles":{
+
+//             }
+//         }
+//     ],
+//     "edges":[
+//         {
+//             "fromId":"drag_1573026009782",
+//             "id":15734580728046092,
+//             "label":"肯定;否定",
+//             "styles":{
+
+//             },
+//             "toId":"drag_1573026011115"
+//         },
+//         {
+//             "fromId":"drag_1573026009782",
+//             "id":15734580728042188,
+//             "label":"默认",
+//             "styles":{
+
+//             },
+//             "toId":"drag_1573026012506"
+//         },
+//         {
+//             "fromId":"drag_1573026009782",
+//             "id":15734580728043428,
+//             "label":"NO",
+//             "styles":{
+
+//             },
+//             "toId":"drag_591573095089082"
+//         }
+//     ]
+//   };
+//   if(!nodeJson) return false;
+//   var data={Node:[],Theme:nodeJson.Theme,StageData:nodeJson.StageData};
+//   console.log(nodes, 1)
+//   var iNode=nodeJson.nodes;
+//   var iLink=nodeJson.edges;
+//   if(iNode){
+//     for(var i = 0 ; i<iNode.length; i++){
+//       var item=iNode[i];
+//       var json_c={
+//         location:item.location,
+//         id:item.id,
+//         name:item.name && item.name.split('\n')[1],
+//         title:item.name && item.name.split('\n')[0],
+//         // styles:{
+//         //   backgroundColor:item.styles['background.color'],
+//         //   strokeStyle:item.styles['border.color'],
+//         // },
+//         type:'rect'
+//       }
+//       if(iLink){
+//         var arr=[];
+//         for(var j = 0 ; j<iLink.length; j++){
+//           var item_s=iLink[j];
+//           if(item_s.fromId==json_c.id){
+//             var json_s={
+//               toNodeid:item_s.toId,
+//               styles:{
+//                 lineStrokeStyle:item_s['edge.color']
+//               }
+//             };
+//             arr.push(json_s);
+//           }
+//         }
+//         json_c.linkTo=arr;
+//       }
+//       data.Node.push(json_c);
+//     }
+//     console.log(data,2)
+//     stage.drawNodeData(data);
+//   }
+// }
 })(window)
